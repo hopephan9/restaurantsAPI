@@ -18,7 +18,7 @@ from django.urls import path, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
 
-from hope.restaurant.views import RestaurantViewSet
+from hope.restaurant.views import RestaurantViewSet, MenuItemViewSet
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -37,6 +37,7 @@ class UserViewSet(viewsets.ModelViewSet):
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'restaurant', RestaurantViewSet)
+router.register(r'menu-items', MenuItemViewSet)
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
