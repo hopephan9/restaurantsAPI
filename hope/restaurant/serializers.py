@@ -20,4 +20,4 @@ class RestaurantSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Restaurant
-        fields = ['name', 'description', 'chain', 'rating', 'address', 'open', 'close', 'menuitem']
+        fields = ['name', 'description', 'chain', 'rating', 'address', 'open', 'close', 'menuitem', 'id', 'url']

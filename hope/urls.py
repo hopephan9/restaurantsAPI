@@ -17,6 +17,7 @@ Including another URLconf
 from django.urls import path, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
+# from map import views as map_views
 
 from hope.restaurant.views import RestaurantViewSet, MenuItemViewSet
 
@@ -42,5 +43,6 @@ router.register(r'menu-items', MenuItemViewSet)
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     path('', include(router.urls)),
+    # path('', map_views.index, name='index')
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
